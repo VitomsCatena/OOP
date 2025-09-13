@@ -15,14 +15,14 @@ class Human:
 class Superhero(Human):
     """A superhero with special abilities, inheriting from Human."""
     def __init__(self, name, age, alias, superpower, power_level):
-        # Call the parent class's constructor
+        # Calling constructor
         super().__init__(name, age)
         
         # New attributes for the Superhero class
         self.alias = alias
         self.superpower = superpower
         
-        # A private attribute to demonstrate encapsulation
+        # Private attribute demonstrating encapsulation
         self.__power_level = power_level
 
     # Polymorphism: Overriding the parent's greet method
@@ -37,14 +37,13 @@ class Superhero(Human):
         else:
             print(f"{self.alias} tries to use their {self.superpower}, but the power level is too low.")
     
-    # Encapsulation: A method to safely access the private attribute
+    # A method to safely access the private attribute
     def get_power_level(self):
         """Returns the private power level."""
         return self.__power_level
 
-# --- Creating and using objects ---
 
-# Create a regular Human object
+# Creating a regular Human object
 citizen = Human("Alex", 30)
 
 # Create a Superhero object
