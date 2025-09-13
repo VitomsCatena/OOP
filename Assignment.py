@@ -65,4 +65,69 @@ try:
     print(captain_code.__power_level)
 except AttributeError as e:
     print(f"\nCaught an error: {e}")
-    print("This shows that __power_level is private and can't be accessed directly.")
+    print("This shows that __power_level is private and can't be accessed directly."
+
+
+
+
+          
+
+#Polymorphism in Vehicles
+
+
+# The Parent Class
+class Vehicle:
+    """A general vehicle with a default move method."""
+    def move(self):
+        """The generic move action."""
+        print("The vehicle is moving.")
+
+# The Car Child Class
+class Car(Vehicle):
+    """A car that drives on roads."""
+
+    def move(self):
+        print("The car is driving on the road. 🚗")
+
+# The Plane Child Class
+class Plane(Vehicle):
+    """A plane that flies through the air."""
+
+    def move(self):
+        print("The plane is flying in the sky. ✈️")
+
+# The Boat Child Class
+class Boat(Vehicle):
+    """A boat that sails on the water."""
+
+    def move(self):
+        print("The boat is sailing across the water. ⛵")
+
+# The Bicycle Child Class
+class Bicycle(Vehicle):
+    """A bicycle that is pedaled."""
+    # Polymorphism: 
+    def move(self):
+        print("The bicycle is being pedaled forward. 🚴")
+
+# ---Demonstrating polymorphism ---
+def travel(vehicle):
+    """
+    A function that takes a Vehicle object and calls its move() method.
+    The same function call works for different types of vehicles.
+    """
+    vehicle.move()
+
+# --- Creating and using objects ---
+print("Let's watch different vehicles travel!")
+
+my_car = Car()
+my_plane = Plane()
+my_boat = Boat()
+my_bicycle = Bicycle()
+
+# Use the same function to "move" each object.
+travel(my_car)
+travel(my_plane)
+travel(my_boat)
+travel(my_bicycle)
