@@ -44,10 +44,10 @@ class Superhero(Human):
 
 
 # Creating a regular Human object
-citizen = Human("Alex", 30)
+citizen = Human("Amerix", 30)
 
 # Create a Superhero object
-captain_code = Superhero("John Doe", 25, "Captain Code", "Debug-vision", 95)
+captain_code = Superhero("VIC", 25, "Captain Code", "Debug-vision", 95)
 
 # Demonstrate polymorphism with the greet method
 print(citizen.greet())
@@ -55,13 +55,12 @@ print(captain_code.greet())
 
 print("-" * 30)
 
-# Demonstrate a superhero-specific method
+# Demonstrating superhero-specific method
 captain_code.use_superpower()
 
-# Demonstrate encapsulation by accessing the private attribute through a public method
+#Encapsulation by accessing the private attribute through a public method
 print(f"Captain Code's current power level is: {captain_code.get_power_level()}")
 
-# Attempting to directly access the private attribute will cause an error
 try:
     print(captain_code.__power_level)
 except AttributeError as e:
