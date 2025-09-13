@@ -1,3 +1,5 @@
+#Superhero Class with Inheritance
+
 # The Parent Class
 class Human:
     """A general human being with basic properties."""
